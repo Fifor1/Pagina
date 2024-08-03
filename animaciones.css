@@ -1,0 +1,180 @@
+/* Animaciones para los cuadros en Cueros Conac */
+
+/* Animación genérica */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    opacity: 0; /* Inicialmente invisibles */
+}
+
+/* Animación para mostrar los cuadros */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Aplicar animación de fadeIn a los cuadros */
+.animated.fadeIn {
+    animation-name: fadeIn;
+}
+
+/* Estilos adicionales para los cuadros de texto a la izquierda */
+.cuadro {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.cuadro .contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cuadro .contenido .texto {
+    flex: 1;
+}
+
+.cuadro .contenido .imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.cuadro .contenido .imagen img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+/* Estilos adicionales para los cuadros de texto a la derecha */
+.cuadro-texto-der {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.cuadro-texto-der .contenido {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.cuadro-texto-der .contenido .texto {
+    flex: 1;
+}
+
+.cuadro-texto-der .contenido .imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.cuadro-texto-der .contenido .imagen img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+/* Estilos adicionales para los cuadros de Sucursales */
+.sucursales {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.sucursales .fila {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.sucursales .small-cuadro {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.sucursales .small-cuadro .info {
+    padding: 10px;
+}
+
+.sucursales .small-cuadro img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+/* Estilos para la animación del botón "Cotizaciones Aquí" */
+.quote-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quote-btn:hover {
+    background-color: #23527c;
+}
+
+/* Estilos para el botón de volver arriba */
+.back-to-top-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("images/up-arrow.png");
+    background-size: cover;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Estilos adicionales */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .cuadro, .cuadro-texto-der, .sucursales {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cuadro, .cuadro-texto-der, .sucursales {
+        padding: 10px;
+    }
+}

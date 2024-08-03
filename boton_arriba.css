@@ -1,0 +1,30 @@
+.back-to-top-btn {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+
+.back-to-top-btn:hover {
+    background-color: #0b7dda;
+}
+
+.back-to-top-btn:before {
+    content: '\2191'; 
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .back-to-top-btn {
+        bottom: 10px;
+        left: 10px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

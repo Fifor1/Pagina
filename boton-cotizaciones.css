@@ -1,0 +1,60 @@
+.quote-btn {
+    display: inline-block;
+    width: auto;
+    padding: 12px 24px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 26px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1100;
+    white-space: nowrap;
+}
+
+.quote-btn:hover {
+    background-color: #f57c00;
+}
+
+.cotizacionesSeccion {
+    position: fixed;
+    z-index: 1100;
+    bottom: 2rem;
+}
+
+#rightButton {
+    right: 2rem;
+    bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .quote-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        bottom: 2rem;
+        right: 2rem;
+    }
+    .cotizacionesSeccion {
+        bottom: 2rem;
+    }
+    #rightButton {
+        right: 2rem;
+        bottom: 2rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .quote-btn {
+        font-size: 0.8rem;
+        padding: 10px 10px;
+        bottom: 2rem;
+        right: 2rem;
+    }
+    #rightButton {
+        right: 2rem;
+        bottom: 2rem;
+    }
+}

@@ -1,0 +1,106 @@
+/* Estilo para cuadros estándar con imagen a la izquierda y texto a la derecha */
+.cuadro {
+    margin-bottom: 2rem; /* Margen inferior */
+    overflow: hidden;
+    background-color: #fff; /* Color de fondo para los cuadros */
+    padding: 1.5rem; /* Padding interior */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px; /* Ancho máximo ajustado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cuadro .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre imagen y texto */
+    flex-direction: row; /* Texto a la izquierda, imagen a la derecha */
+    max-width: 100%; /* Ancho máximo del contenido */
+}
+
+.cuadro h2 {
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    margin-bottom: 1rem;
+}
+
+.cuadro .texto {
+    flex: 1;
+    margin-right: 1.5rem; /* Separación entre texto e imagen */
+}
+
+.cuadro .imagen img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    display: block;
+    border-radius: 8px;
+}
+
+/* Estilos específicos para el cuadro de Historia */
+#historia.cuadro {
+    background-color: #f5e8d9; /* Color de fondo para el cuadro de historia */
+    margin-bottom: 2rem; /* Margen inferior */
+    max-width: 1000px; /* Ancho máximo ajustado para el cuadro de historia */
+    width: calc(100% - 3rem); /* Ancho ajustado menos el padding */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box; /* Mantener el ancho total con el padding */
+}
+
+#historia.cuadro .contenido {
+    max-width: 600px; /* Ancho máximo para el contenido dentro del cuadro de historia */
+    margin-left: auto; /* Alineación del contenido */
+    margin-right: auto;
+}
+
+#historia.cuadro .contenido .texto {
+    margin-right: auto; /* Alineación del texto */
+    margin-left: auto;
+}
+
+#historia.cuadro .contenido .imagen {
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    text-align: center; /* Alineación de la imagen al centro */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .cuadro {
+        padding: 1.5rem; /* Reducir el padding en dispositivos móviles */
+    }
+
+    .cuadro h2 {
+        font-size: 1.3rem; /* Reducir el tamaño de fuente en dispositivos móviles */
+    }
+
+    .cuadro .imagen img {
+        max-width: 150px; /* Reducir el tamaño máximo de la imagen en dispositivos móviles */
+    }
+    
+    .cuadro .contenido {
+        flex-direction: column; /* Cambiar a disposición vertical en móviles */
+        align-items: flex-start; /* Alinear elementos al inicio en móviles */
+    }
+
+    .cuadro .texto {
+        margin: 1rem 0; /* Añadir espacio entre texto e imagen en móviles */
+    }
+
+    /* Estilos específicos para el cuadro de Historia en dispositivos móviles */
+    #historia.cuadro {
+        padding: 2rem; /* Aumentamos el padding para mayor contenido en móviles */
+    }
+
+    #historia.cuadro .contenido {
+        max-width: 100%; /* Ancho máximo para el contenido dentro del cuadro de historia en móviles */
+    }
+
+    #historia.cuadro .contenido .imagen {
+        max-width: 150px; /* Tamaño máximo de la imagen en móviles */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,34 @@
+/* Estilo para cuadros con texto a la derecha e imagen a la izquierda */
+#origen .contenido,
+#futuro .contenido,
+#certificacion .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre imagen y texto */
+    flex-direction: row; /* Texto a la izquierda, imagen a la derecha */
+    max-width: 100%; /* Ancho máximo del contenido */
+}
+
+#origen h2,
+#futuro h2,
+#certificacion h2 {
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    margin-bottom: 1rem;
+}
+
+#origen .texto,
+#futuro .texto,
+#certificacion .texto {
+    flex: 1;
+    margin-right: 1.5rem; /* Separación entre texto e imagen */
+}
+
+#origen .imagen img,
+#futuro .imagen img,
+#certificacion .imagen img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    display: block;
+    border-radius: 8px;
+}

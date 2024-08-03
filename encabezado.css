@@ -1,0 +1,46 @@
+/* Estilo para el encabezado */
+.header {
+    background: url('encabezado.jpg') no-repeat center center; /* Imagen de fondo centrada */
+    background-size: cover; /* Ajustar la imagen de fondo para cubrir el contenedor */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0; /* Aumentar el padding para hacerlo más grande */
+    z-index: 1000; /* Z-index para estar sobre otros elementos */
+    position: relative; /* Posición relativa */
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Coloca el overlay detrás del texto */
+}
+
+.header .container {
+    position: relative;
+    z-index: 2; /* Coloca el texto por encima del overlay */
+}
+
+.header h1 {
+    font-size: 2.5rem; /* Ajustar el tamaño de la fuente del encabezado */
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-style: italic;
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 0; /* Reducir el padding en dispositivos móviles */
+    }
+
+    .header h1 {
+        font-size: 2rem; /* Ajustar tamaño de fuente para dispositivos móviles */
+    }
+}
